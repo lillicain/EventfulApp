@@ -31,6 +31,4 @@ struct PostItemView: View {
     }
 }
 
-#Preview {
-    PostItemView()
-}
+
