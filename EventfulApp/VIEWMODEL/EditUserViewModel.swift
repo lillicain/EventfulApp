@@ -59,15 +59,15 @@ class EditUserViewModel: ObservableObject {
             data["profileInformation"] = profileInformation
         }
         if !data.isEmpty {
-            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
+//            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
         }
     }
     
     func signOut() throws {
-        AuthenticationViewModel.shared.signOut()
+//        AuthenticationViewModel.shared.signOut()
     }
     
     func deleteAccount() async throws {
-        try await AuthenticationViewModel.shared.deleteAccount()
+//        try await AuthenticationViewModel.shared.deleteAccount()
     }
 }

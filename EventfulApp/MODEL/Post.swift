@@ -14,16 +14,16 @@ struct Post: Identifiable, Hashable, Codable {
     let description: String
     let count: Int
     let imageUrl: String
-    let timestamp: Timestamp
+//    let timestamp: Timestamp
     let location: String
     
     var user: User?
 }
 
 extension Post {
-    static var MOCK_POST: [Post] = [
-        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea Image", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT"),
-        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT"),
-        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT")
-    ]
+//    static var MOCK_POST: [Post] = [
+//        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea Image", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT"),
+//        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT"),
+//        .init(id: NSUUID().uuidString, userUid: NSUserName(), description: "Pangea", count: 0, imageUrl: "", timestamp: Timestamp(date: .now), location: "610 South Tech Ridge Drive, Saint George, UT")
+//    ]
 }

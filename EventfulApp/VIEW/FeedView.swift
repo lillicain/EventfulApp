@@ -233,7 +233,3 @@ extension FeedView {
     }
 }
 
-
-#Preview {
-    FeedView()
-}

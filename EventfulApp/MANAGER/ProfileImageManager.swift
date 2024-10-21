@@ -5,7 +5,7 @@
 //  Created by Lilli Cain on 10/21/24.
 //
 
-import Foundation
+import SwiftUI
 //import Kingfisher
 
 struct ProfileImageManager: View {
@@ -14,11 +14,11 @@ struct ProfileImageManager: View {
     
     var body: some View {
         if let imageUrl = user.profileImage {
-            KFImage(URL(string: imageUrl))
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.dimension, height: size.dimension)
-                .clipShape(.circle)
+//            KFImage(URL(string: imageUrl))
+//                .resizable()
+//                .scaledToFill()
+//                .frame(width: size.dimension, height: size.dimension)
+//                .clipShape(.circle)
         } else {
             Image(systemName: "person.crop.circle")
                 .resizable()
