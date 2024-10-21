@@ -11,9 +11,9 @@ import CoreLocationUI
 import MapKit
 import UIKit
 import SwiftUI
-import Firebase
-import FirebaseFirestore
-import FirebaseFirestoreSwift
+//import Firebase
+//import FirebaseFirestore
+//import FirebaseFirestoreSwift
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
