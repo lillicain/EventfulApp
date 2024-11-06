@@ -57,6 +57,8 @@ struct LocationView: View {
                         if let location = locationManager.placemark?.location?.coordinate {
                             Annotation("\(location)", coordinate: location) {
 //                                KFImage(URL(string: post.imageUrl))
+                                Image(systemName: "person.crop.circle")
+                             
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 125, height: 125)
