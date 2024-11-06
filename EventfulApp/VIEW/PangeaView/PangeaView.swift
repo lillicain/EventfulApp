@@ -96,14 +96,14 @@ extension PangeaView {
                 }
             
             VStack(spacing: 100) {
-                Text("PANGEA")
+                Text("App!")
                     .font(FontNine.title)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(.white)
                     .kerning(3.0)
                     .offset(x: -1.5, y: 1.5)
                     .overlay {
-                        Text("PANGEA")
+                        Text("App!")
                             .font(FontNine.title)
                             .scaledToFit()
                             .foregroundColor(authenticationViewModel.green[0])
@@ -120,24 +120,24 @@ extension PangeaView {
                 }
             }
             
-            ZStack {
-                Text("Reconnect")
-                    .font(FontFour.small)
-                    .padding(.top, 135)
-                    .kerning(5)
-                    .foregroundColor(authenticationViewModel.pink[0])
-                    .offset(x: -0.5, y: -0.5)
-                    .padding(.leading, 175)
-                    .overlay {
-                        Text("Reconnect")
-                            .font(FontFour.small)
-                            .padding(.top, 135)
-                            .kerning(5)
-                            .foregroundStyle(LinearGradient(colors: [authenticationViewModel.violet[0], authenticationViewModel.pink[0], authenticationViewModel.pink[0], authenticationViewModel.pink[0]], startPoint: .top, endPoint: .center))
-                            .shadow(color: .black.opacity(0.25), radius: 0.5, x: 1.5, y: -0.5)
-                            .padding(.leading, 175)
-                    }
-            }
+//            ZStack {
+//                Text("Reconnect")
+//                    .font(FontFour.small)
+//                    .padding(.top, 135)
+//                    .kerning(5)
+//                    .foregroundColor(authenticationViewModel.pink[0])
+//                    .offset(x: -0.5, y: -0.5)
+//                    .padding(.leading, 175)
+//                    .overlay {
+//                        Text("Reconnect")
+//                            .font(FontFour.small)
+//                            .padding(.top, 135)
+//                            .kerning(5)
+//                            .foregroundStyle(LinearGradient(colors: [authenticationViewModel.violet[0], authenticationViewModel.pink[0], authenticationViewModel.pink[0], authenticationViewModel.pink[0]], startPoint: .top, endPoint: .center))
+//                            .shadow(color: .black.opacity(0.25), radius: 0.5, x: 1.5, y: -0.5)
+//                            .padding(.leading, 175)
+//                    }
+//            }
         }
     }
 }
