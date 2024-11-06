@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//import Firebase
-//import FirebaseFirestore
+import Firebase
+import FirebaseFirestore
 
 struct PostManager {
 //    static let shared = PostManager()
