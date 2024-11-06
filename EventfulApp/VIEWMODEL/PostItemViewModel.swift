@@ -21,7 +21,7 @@ class PostItemViewModel: ObservableObject {
     
     @MainActor
     func fetchUserPosts() async throws {
-//        self.posts = try await PostManager.fetchUserPosts(uid: user.id)
+        self.posts = try await PostManager.fetchUserPosts(uid: user.id)
         for index in 0..<posts.count {
             posts[index].user = self.user
         }

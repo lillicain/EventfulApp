@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import Kingfisher
+import Kingfisher
 
 struct ProfileImageManager: View {
     let user: User
@@ -14,11 +14,11 @@ struct ProfileImageManager: View {
     
     var body: some View {
         if let imageUrl = user.profileImage {
-//            KFImage(URL(string: imageUrl))
-//                .resizable()
-//                .scaledToFill()
-//                .frame(width: size.dimension, height: size.dimension)
-//                .clipShape(.circle)
+            KFImage(URL(string: imageUrl))
+                .resizable()
+                .scaledToFill()
+                .frame(width: size.dimension, height: size.dimension)
+                .clipShape(.circle)
         } else {
             Image(systemName: "person.crop.circle")
                 .resizable()

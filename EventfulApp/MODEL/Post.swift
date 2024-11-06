@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//import Firebase
+import Firebase
 
 struct Post: Identifiable, Hashable, Codable {
     let id: String
