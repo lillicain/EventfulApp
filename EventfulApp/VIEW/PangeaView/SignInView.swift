@@ -5,6 +5,8 @@
 //  Created by Lilli Cain on 10/21/24.
 //
 
+import SwiftUI
+
 struct SignInView: View {
     
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel

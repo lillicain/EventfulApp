@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocationUI
 import CoreLocation
+import Kingfisher
 //import Kingfisher
 
 struct LocationView: View {
@@ -55,7 +56,7 @@ struct LocationView: View {
                         
                         if let location = locationManager.placemark?.location?.coordinate {
                             Annotation("\(location)", coordinate: location) {
-                                KFImage(URL(string: post.imageUrl))
+//                                KFImage(URL(string: post.imageUrl))
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 125, height: 125)

@@ -123,6 +123,3 @@ struct ProfileScreen: View {
     }
 }
 
-#Preview {
-    ProfileScreen()
-}

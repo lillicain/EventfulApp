@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 import CoreLocationUI
+import SwiftUI
 
 struct LocationInformation: View {
     @Binding var selectedResult: MKMapItem?

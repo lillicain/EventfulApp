@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
-import FirebaseFirestoreSwift
+//import FirebaseFirestoreSwift
 
 class FeedViewModel: ObservableObject {
     @Published var posts = [Post]()

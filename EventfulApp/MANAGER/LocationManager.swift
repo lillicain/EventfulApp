@@ -13,7 +13,6 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -153,19 +152,19 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate, MK
     
     func getLocation(completionHandler: @escaping (CLLocationCoordinate2D?) -> Void) {
         let geocoder = CLGeocoder()
-        if let newPost = post.location {
-            geocoder.geocodeAddressString(newPost, completionHandler: { (placemarks, error) in
-                if error == nil {
-                    let locationCoordinates = placemarks?[0].location
-                    completionHandler(locationCoordinates?.coordinate)
-
-                } else {
-                    completionHandler(nil)
-                }
-            })
-        } else {
-            completionHandler(nil)
-        }
+//        if let newPost = post.location {
+//            geocoder.geocodeAddressString(newPost, completionHandler: { (placemarks, error) in
+//                if error == nil {
+//                    let locationCoordinates = placemarks?[0].location
+//                    completionHandler(locationCoordinates?.coordinate)
+//
+//                } else {
+//                    completionHandler(nil)
+//                }
+//            })
+//        } else {
+//            completionHandler(nil)
+//        }
     }
     
     
