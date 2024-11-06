@@ -7,9 +7,8 @@
 
 import Foundation
 import SwiftUI
-//import Firebase
-//import FirebaseFirestore
-//import FirebaseFirestoreSwift
+import Firebase
+import FirebaseFirestore
 import PhotosUI
 
 @MainActor

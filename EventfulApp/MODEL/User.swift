@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//import Firebase
-//import FirebaseAuth
+import Firebase
+import FirebaseAuth
 
 struct User: Identifiable, Hashable, Codable {
     let id: String
@@ -25,8 +25,8 @@ struct User: Identifiable, Hashable, Codable {
 
 extension User {
     static var MOCK_USER: [User] = [
-        .init(id: NSUUID().uuidString, username: "Pangea", email: "lillian@monark1.com", name: "Pangea"),
-        .init(id: NSUUID().uuidString, username: "PangeaPolice", email: "pangea@support.com", name: "Police", profileInformation: "Police Of This"),
-        .init(id: NSUUID().uuidString, username: "FraudAccount", email: "fraud@support.com", name: "Fraud", profileInformation: "🫵")
+        .init(id: NSUUID().uuidString, username: "App", email: "app@support.com", name: "App"),
+        .init(id: NSUUID().uuidString, username: "User", email: "user@support.com", name: "User", profileInformation: "User"),
+        .init(id: NSUUID().uuidString, username: "Account", email: "account@support.com", name: "Account", profileInformation: "Account")
     ]
 }

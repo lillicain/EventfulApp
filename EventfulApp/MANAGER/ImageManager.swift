@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-//import Firebase
-//import FirebaseStorage
+import Firebase
+import FirebaseStorage
 
 struct ImageManager {
     static func uploadImage(image: UIImage) async throws -> String? {
