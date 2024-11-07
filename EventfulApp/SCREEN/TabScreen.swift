@@ -18,6 +18,9 @@ struct TabScreen: View {
             
             if let user = authenticationViewModel.currentUser {
                 
+                EventView(event: Event.MOCK_EVENT[0])
+                    .tabItem { Image(systemName: "globe") }
+                
                 ProfileScreen(user: user)
                     .tabItem { Image(systemName: "globe") }
                 
@@ -27,9 +30,11 @@ struct TabScreen: View {
                 FeedView(post: Post.MOCK_POST[0])
                     .tabItem { Image(systemName: "globe") }
                 
-            } else if authenticationViewModel.currentUser == nil {
-                PangeaView()
-            
+                            } else if authenticationViewModel.currentUser == nil {
+                                PangeaView()
+            } else {
+                loadingScreen
+                
             }
         }
         .accentColor(authenticationViewModel.pink[0])
