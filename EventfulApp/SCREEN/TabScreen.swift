@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseStorage
+import FirebaseCore
 
 struct TabScreen: View {
     
@@ -25,8 +27,9 @@ struct TabScreen: View {
                 FeedView(post: Post.MOCK_POST[0])
                     .tabItem { Image(systemName: "globe") }
                 
-            } else {
-                loadingScreen
+            } else if authenticationViewModel.currentUser == nil {
+                PangeaView()
+            
             }
         }
         .accentColor(authenticationViewModel.pink[0])
