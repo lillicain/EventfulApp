@@ -13,7 +13,7 @@ struct EventItemView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 25) {
-            EventView(event: Event.MOCK_EVENT[0])
+//            EventView(event: Event.MOCK_EVENT[0])
         }
         .padding()
     }
