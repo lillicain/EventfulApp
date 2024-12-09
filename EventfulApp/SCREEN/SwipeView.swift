@@ -7,11 +7,18 @@
 
 import SwiftUI
 
-struct SwipeScreen: View {
+struct SwipeView: View {
     
     @State private var show = false
     
+    
     @ObservedObject var data: SwipeViewModel
+    
+    init(manager: FirestoreEventManager) {
+        _viewModel = State(wrappedValue: SwipeViewViewModel(fireStoreManager: manager))
+    }
+    
+    
     
     var body: some View {
         NavigationView {
