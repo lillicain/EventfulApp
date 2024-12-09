@@ -6,37 +6,42 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct SwipeView: View {
     
+    @State var viewModel: SwipeViewModel
     @State private var show = false
-    
-    
-    @ObservedObject var data: SwipeViewModel
-    
+
     init(manager: FirestoreEventManager) {
-        _viewModel = State(wrappedValue: SwipeViewViewModel(fireStoreManager: manager))
+        _viewModel = State(wrappedValue: SwipeViewModel(fireStoreManager: manager))
     }
-    
-    
     
     var body: some View {
-        NavigationView {
-            List {
-               RoundedRectangle(cornerRadius: 10)
-                    .frame(width: 300, height: 200)
-                    .foregroundColor(Color.gray.opacity(0.3))
-                    .scaledToFit()
+        ZStack {
+            CardStackView(viewModel: viewModel)
+            VStack {
+                HStack {
+                    Spacer()
                     
-                
-                
-                Button {
-                    show.toggle()
-                } label: {
-                    Text("User Profile")
+                    Button {
+                        show.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
-                
+                Spacer()
             }
+            .padding()
         }
+        .fullScreenCover(isPresented: $show, content: {
+            EventCreationView()
+        })
     }
 }
+
+#Preview {
+    let manager = FirestoreEventManager()
+    SwipeView(manager: manager)
+}
+

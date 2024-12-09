@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 
     @Observable
-    class SwipeViewViewModel{
+    class SwipeViewModel{
         
         var events: [Event] = []
         var isLoading = false
@@ -47,13 +47,13 @@ import FirebaseFirestore
         
         func toggleInfo(){
             showInfo = true
-            print("\(currentEvent.title)")
         }
         func removeEventCard(_ card: Event) {
             guard let index = events.firstIndex(where: { $0.id == card.id}) else { return }
             events.remove(at: index)
         }
     }
+
 
 //public class SwipeViewModel: ObservableObject {
 //    
