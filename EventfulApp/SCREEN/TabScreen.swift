@@ -13,13 +13,18 @@ struct TabScreen: View {
     
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
     
+    
+    let firestoreEventManager = FirestoreEventManager()
+    
     var body: some View {
         TabView {
             
             if let user = authenticationViewModel.currentUser {
                 
-//                EventView(event: Event.MOCK_EVENT[0])
-                FeedView(post: Post.MOCK_POST[0])
+                
+                
+        
+                SwipeView(manager: firestoreEventManager)
                     .tabItem { Image(systemName: "globe") }
                 
                 ProfileScreen(user: user)
@@ -31,11 +36,10 @@ struct TabScreen: View {
                 FeedView(post: Post.MOCK_POST[0])
                     .tabItem { Image(systemName: "globe") }
                 
-                             } else if authenticationViewModel.currentUser == nil {
-                                PangeaView()
+//                             } else if authenticationViewModel.currentUser == nil {
+//                                PangeaView()
             } else {
                 loadingScreen
-                
             }
         }
         .accentColor(authenticationViewModel.pink[0])
