@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 
@@ -22,7 +21,7 @@ struct DBProfile: Codable, Hashable {
     let eventsAttended: [String]
     let eventsHosted: [String]
     init (auth: AuthDataResultModel) {
-        let user = auth.user
+        let user = auth.self
          self.id = auth.uid
          self.email = auth.email
         self.photoURL = auth.photoUrl

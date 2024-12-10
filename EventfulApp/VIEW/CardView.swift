@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct CardView: View {
-    var viewModel: SwipeViewViewModel
+    var viewModel: SwipeViewModel
     var event: Event
-    var showInfo: Bool
+    var show: Bool
     @State private var xOffset: CGFloat = 0
     @State private var degrees: Double = 0
     var body: some View {
         ZStack(alignment: .bottom) {
-            // Background image, aka awesome
+            
             Image("WonderfulParty")
                 .resizable()
                 .scaledToFill()
-            // Text and button overlays
-            EventInfoView(event: event, showInfo: showInfo)
+            EventItemView(event: event, showInfo: show)
                 .frame(maxWidth: cardWidth)
                 .padding(.horizontal)
         }
@@ -36,7 +35,6 @@ struct CardView: View {
             
         )
         .shadow(radius: 10)
-        
     }
 }
 
@@ -85,7 +83,6 @@ private extension CardView {
     }
 }
 
-// Temporary way to size the card. probably should not use as will be deprecated but i currently give up on geometryreader
 private extension CardView {
     var cardWidth: CGFloat {
         UIScreen.main.bounds.width - 20
@@ -93,14 +90,13 @@ private extension CardView {
     var cardHeight: CGFloat {
         UIScreen.main.bounds.height / 1.45
     }
-    // animation screen cut off for snapping back
     var screenCutOff: CGFloat {
         (UIScreen.main.bounds.width / 2) * 0.8
     }
 }
 
 #Preview {
-    CardView(viewModel: SwipeViewViewModel(fireStoreManager: FirestoreEventManager()),
+    CardView(viewModel: SwipeViewModel(fireStoreManager: FirestoreEventManager()),
              event: Event(
                 id: "1",
                 name: "Sample Event",
@@ -113,7 +109,7 @@ private extension CardView {
                 rsvp: 100,
                 swipeCount: 50,
                 host: "John Doe"
-             ), showInfo: false)
+             ), show: false)
 }
 
 //struct CardView: View {
