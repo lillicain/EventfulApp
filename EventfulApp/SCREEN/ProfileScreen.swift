@@ -23,16 +23,16 @@ struct ProfileScreen: View {
             ScrollView {
                 VStack {
                     ZStack(alignment: .top) {
-                        RoundedRectangle(cornerRadius: 65, style: .circular)
-                            .foregroundColor(authenticationViewModel.blue[0])
-                            .frame(width: 405, height: 272.5)
-                            .padding(.horizontal, 5)
-                            .overlay(alignment: .top) {
-                                LocationView(post: Post.MOCK_POST[0])
-                                    .mapControlVisibility(.hidden)
-                                    .frame(width: 375, height: 257.5)
-                                    .clipShape(RoundedRectangle(cornerRadius: 50, style: .circular))
-                            }
+//                        RoundedRectangle(cornerRadius: 65, style: .circular)
+//                            .foregroundColor(authenticationViewModel.blue[0])
+//                            .frame(width: 405, height: 272.5)
+//                            .padding(.horizontal, 5)
+//                            .overlay(alignment: .top) {
+//                                LocationView(post: Post.MOCK_POST[0])
+//                                    .mapControlVisibility(.hidden)
+//                                    .frame(width: 375, height: 257.5)
+//                                    .clipShape(RoundedRectangle(cornerRadius: 50, style: .circular))
+//                            }
                     
                         ZStack {
                             Circle()
