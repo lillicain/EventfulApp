@@ -19,13 +19,24 @@ class AuthenticationViewModel: ObservableObject {
     @Published var currentSignInStatus = SignInState.pangea
     
     @Published var backgroundColor: Color?
-    @Published var blue = ["0030FF"].hexToColorArray()
-    @Published var green = ["CCFF00"].hexToColorArray()
+    @Published var blue = ["3E446E"].hexToColorArray()
+    @Published var green = ["59AC99"].hexToColorArray()
+    @Published var yellow = ["FCAB20"].hexToColorArray()
     @Published var violet = ["480CA8"].hexToColorArray()
     @Published var pink = ["FF3B5B"].hexToColorArray()
-    @Published var orange = ["FF4500"].hexToColorArray()
+    @Published var orange = ["F56438"].hexToColorArray()
+    @Published var red = ["E7363C"].hexToColorArray()
     @Published var black = ["0C0F0A"].hexToColorArray()
     @Published var white = ["FDFFFC"].hexToColorArray()
+    
+//    @Published var backgroundColor: Color?
+//    @Published var blue = ["0030FF"].hexToColorArray()
+//    @Published var green = ["CCFF00"].hexToColorArray()
+//    @Published var violet = ["480CA8"].hexToColorArray()
+//    @Published var pink = ["FF3B5B"].hexToColorArray()
+//    @Published var orange = ["FF4500"].hexToColorArray()
+//    @Published var black = ["0C0F0A"].hexToColorArray()
+//    @Published var white = ["FDFFFC"].hexToColorArray()
     
     static let shared = AuthenticationViewModel()
     

@@ -21,12 +21,12 @@ import SwiftUI
 
 struct EventItemView: View {
     var event: Event
-    @State var showInfo: Bool
+    @State var show: Bool
     
 
     var body: some View {
         VStack {
-            if showInfo {
+            if show {
                 VStack(spacing: 20) {
                     // All the attributes
                     VStack {
@@ -100,7 +100,7 @@ struct EventItemView: View {
                     .cornerRadius(12)
                     Button(action: {
                         withAnimation {
-                            showInfo.toggle()
+                            show.toggle()
                             
                         }
                     }) {
@@ -131,7 +131,7 @@ struct EventItemView: View {
                     Button(action: {
                         //  show info toggle
                         withAnimation {
-                            showInfo.toggle()
+                            show.toggle()
                         }
                         print("More Info button tapped")
                     }) {

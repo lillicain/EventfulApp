@@ -37,63 +37,63 @@ struct FeedView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                HStack(spacing: 20) {
-                    ForEach(posts) { post in
-                        CardView(imageUrl: post.imageUrl, description: post.description)
-                    }
-                }
-                .padding()
-            }
-        }
-    }
-}
-//                userInformation
-//                
-//                    .padding(.top)
-//                    .padding(.bottom, 250)
-//                
-//                LazyVStack(spacing: 125) {
-//                    ForEach(feedViewModel.posts) { post in
-//                        FeedItemView(post: post)
+//                HStack(spacing: 20) {
+//                    ForEach(posts) { post in
+//                        FeedCardView(imageUrl: post.imageUrl, description: post.description)
 //                    }
 //                }
-//                
-//                .task {
-//                    locationManager.requestLocation()
-//                    
-//                    try? await feedViewModel.fetchPosts()
-//                    try? await postViewModel.uploadPost(description: description, location: location)
-//                }
-//                .padding(.top)
+//                .padding()
 //            }
-//            .sheet(isPresented: $newPost, content: {
-//                postView
-//                    .presentationDetents([.height(750)])
-//                    .presentationCornerRadius(50)
-//                    .toolbar(.hidden, for: .navigationBar)
-//            })
-//            
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    NavigationLink {
-//                        SearchScreen()
-//                    } label: {
-//                        Image(systemName: "magnifyingglass")
-//                    }
-//                }
-//                
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button {
-//                        newPost.toggle()
-//                    } label: {
-//                        Text("Create Post")
-//                    }
-//                }
-//            }
-//            .background(LinearGradient(colors: [.clear, .clear, .clear, authenticationViewModel.violet[0].opacity(0.175)], startPoint: .top, endPoint: .bottom).ignoresSafeArea(.all))
 //        }
 //    }
 //}
+                userInformation
+                
+                    .padding(.top)
+                    .padding(.bottom, 250)
+                
+                LazyVStack(spacing: 125) {
+                    ForEach(feedViewModel.posts) { post in
+                        FeedItemView(post: post)
+                    }
+                }
+                
+                .task {
+                    locationManager.requestLocation()
+                    
+                    try? await feedViewModel.fetchPosts()
+                    try? await postViewModel.uploadPost(description: description, location: location)
+                }
+                .padding(.top)
+            }
+            .sheet(isPresented: $newPost, content: {
+                postView
+                    .presentationDetents([.height(750)])
+                    .presentationCornerRadius(50)
+                    .toolbar(.hidden, for: .navigationBar)
+            })
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink {
+                        SearchScreen()
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        newPost.toggle()
+                    } label: {
+                        Text("Create Post")
+                    }
+                }
+            }
+            .background(LinearGradient(colors: [.clear, .clear, .clear, authenticationViewModel.violet[0].opacity(0.175)], startPoint: .top, endPoint: .bottom).ignoresSafeArea(.all))
+        }
+    }
+}
 
 extension FeedView {
     
